@@ -8,9 +8,21 @@ var enemy_4_scene = load("res://scenes/enemy_4.tscn")
 
 var enemy_no := 0
 var enemies = []
+var nearest_enemy
 func _process(delta):
 	
-	
+	var shortest_distance = float(INF)
+	for enemy in enemies:
+		enemy.player_position = $"player".position
+		
+		var enemy_distance = $"player".position.distance_to(enemy.position)
+		if enemy_distance < shortest_distance:
+			shortest_distance = enemy_distance
+			nearest_enemy = enemy
+		if $"player".position.distance_to(nearest_enemy.position) < 300:
+			$"player".current_gun.look_at(nearest_enemy.position)
+		else:
+			$"player".current_gun.rotation = $"player/Control/movement_jt".output.angle()
 	#Spawning enemies
 	if $"enemy_spawn_time".is_stopped():
 		enemy_no = rg.randi_range(1,4)

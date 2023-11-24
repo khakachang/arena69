@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://dgrvsa6utbnch"]
+[gd_scene load_steps=12 format=3 uid="uid://dgrvsa6utbnch"]
 
+[ext_resource type="Script" path="res://scripts/enemy_4.gd" id="1_jakds"]
 [ext_resource type="Texture2D" uid="uid://btcm12rmgkm" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 4/walk_0.png" id="1_vsm15"]
 [ext_resource type="Texture2D" uid="uid://qaycng4uow0s" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 4/walk_1.png" id="2_ihmyj"]
 [ext_resource type="Texture2D" uid="uid://c4gudkvqpx01d" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 4/walk_2.png" id="3_gmnnh"]
@@ -8,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://xavgk0ae1jtl" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 4/walk_5.png" id="6_cpyf5"]
 [ext_resource type="Texture2D" uid="uid://cqo45rncu8eog" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 4/walk_6.png" id="7_esf5i"]
 [ext_resource type="Texture2D" uid="uid://dc6nhupqkopf5" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 4/walk_7.png" id="8_j8xpq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y8jnt"]
+radius = 22.0
+height = 64.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_150fp"]
 animations = [{
@@ -42,10 +47,14 @@ animations = [{
 }]
 
 [node name="enemy_4" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_jakds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_y8jnt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -47)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_150fp")
 animation = &"walk"

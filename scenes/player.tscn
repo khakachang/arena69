@@ -143,6 +143,7 @@ radius = 19.0
 height = 70.0
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("movementJS")]
+motion_mode = 1
 script = ExtResource("1_i41an")
 movementJS = NodePath("Control/movement_jt")
 

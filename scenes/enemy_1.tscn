@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ypbn0dne8h53"]
+[gd_scene load_steps=12 format=3 uid="uid://ypbn0dne8h53"]
 
 [ext_resource type="Texture2D" uid="uid://bi2p0ladlx8ic" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_0.png" id="1_ruqyi"]
 [ext_resource type="Script" path="res://scripts/enemy_1.gd" id="1_sjhbe"]
@@ -42,10 +42,16 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk0kx"]
+radius = 22.0
+height = 62.0
+
 [node name="enemy_1" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_sjhbe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -39)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_bnhxh")
 animation = &"enemy_walk"
@@ -53,3 +59,4 @@ frame = 1
 frame_progress = 0.417137
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hk0kx")
