@@ -1,0 +1,214 @@
+[gd_scene load_steps=34 format=3 uid="uid://skplvjhtmgn2"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_i41an"]
+[ext_resource type="Texture2D" uid="uid://cnlsx57hdknua" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_0.png" id="1_xxsxw"]
+[ext_resource type="Texture2D" uid="uid://ckpvciostwrm5" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_1.png" id="2_4sgra"]
+[ext_resource type="Texture2D" uid="uid://11x2i3u20kky" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_2.png" id="3_kkv0p"]
+[ext_resource type="Texture2D" uid="uid://0i6eabf321er" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_3.png" id="4_v1njn"]
+[ext_resource type="Texture2D" uid="uid://b0jknwe1q66k4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_4.png" id="5_ta7cg"]
+[ext_resource type="Texture2D" uid="uid://ckkse3lkjxiwg" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_5.png" id="6_8q2px"]
+[ext_resource type="Texture2D" uid="uid://bfunviu8a7yig" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_6.png" id="7_2h1jb"]
+[ext_resource type="Texture2D" uid="uid://b5ngohtyet8u5" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_7.png" id="8_m8737"]
+[ext_resource type="Texture2D" uid="uid://bf7sj4rdiik0s" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_8.png" id="9_2jw6b"]
+[ext_resource type="Texture2D" uid="uid://ut8qbqlnxfs4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_9.png" id="10_54ej7"]
+[ext_resource type="Texture2D" uid="uid://duhar8k7qlvm4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/hit_0.png" id="11_65hde"]
+[ext_resource type="Texture2D" uid="uid://bpylbn35ou2tw" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/hit_1.png" id="12_44u5j"]
+[ext_resource type="Texture2D" uid="uid://pm2y0k7vufiq" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/hit_2.png" id="13_76rjg"]
+[ext_resource type="Texture2D" uid="uid://da0qpc6e1nvdg" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_0.png" id="14_ydq56"]
+[ext_resource type="Texture2D" uid="uid://dvqxje7tapok" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_1.png" id="15_xq58f"]
+[ext_resource type="Texture2D" uid="uid://b7ftapwurpuys" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_2.png" id="16_ex11d"]
+[ext_resource type="Texture2D" uid="uid://rrhp10ty03cn" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_3.png" id="17_l4n2b"]
+[ext_resource type="Texture2D" uid="uid://x3j7e71ud2yd" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_4.png" id="18_1203p"]
+[ext_resource type="Texture2D" uid="uid://bkxlb8bb7qs4l" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_5.png" id="19_a04tn"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://joystick/virtual_joystick.tscn" id="20_80lbi"]
+[ext_resource type="Texture2D" uid="uid://mc774hpqfni4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_0.png" id="21_u213s"]
+[ext_resource type="Texture2D" uid="uid://30e2igdlemt6" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_1.png" id="22_8t6ne"]
+[ext_resource type="Texture2D" uid="uid://d1fjkgk0kluty" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_2.png" id="23_wk40p"]
+[ext_resource type="Texture2D" uid="uid://u0sxhy4opj7n" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_3.png" id="24_j5bre"]
+[ext_resource type="Texture2D" uid="uid://cwsce7v82i8ly" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_4.png" id="25_janhx"]
+[ext_resource type="Texture2D" uid="uid://brx5nvo4jgtq6" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_5.png" id="26_cbvfr"]
+[ext_resource type="Texture2D" uid="uid://sto18pkf7qro" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_6.png" id="27_5vbcc"]
+[ext_resource type="Texture2D" uid="uid://f5ok3akakk77" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_7.png" id="28_h6cqc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qa3x"]
+radius = 18.0
+height = 70.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ktnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xxsxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4sgra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kkv0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v1njn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ta7cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8q2px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2h1jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m8737")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2jw6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_54ej7")
+}],
+"loop": false,
+"name": &"death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_65hde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_44u5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_76rjg")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ydq56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xq58f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ex11d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l4n2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1203p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_a04tn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_u213s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8t6ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wk40p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_j5bre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_janhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cbvfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5vbcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h6cqc")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 15.0
+}]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_inubj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swmpf"]
+radius = 19.0
+height = 70.0
+
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("movementJS", "firingJS")]
+script = ExtResource("1_i41an")
+movementJS = NodePath("Control/movement_jt")
+firingJS = NodePath("Control/firing_jt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5qa3x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -41)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_3ktnn")
+animation = &"idle"
+
+[node name="Control" type="CanvasLayer" parent="."]
+
+[node name="movement_jt" parent="Control" instance=ExtResource("20_80lbi")]
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_up"
+action_down = "move_down"
+
+[node name="firing_jt" parent="Control" instance=ExtResource("20_80lbi")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+
+[node name="Control" type="Control" parent="Control"]
+clip_contents = true
+layout_mode = 3
+anchor_left = 0.889757
+anchor_top = 0.337963
+anchor_right = 0.972222
+anchor_bottom = 0.478395
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control/Control"]
+modulate = Color(0.180392, 0.352941, 0.466667, 1)
+scale = Vector2(95, 91)
+texture_normal = SubResource("CanvasTexture_inubj")
+action = "swap_gun"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -921
+limit_top = -307
+limit_right = 913
+limit_bottom = 917
+position_smoothing_enabled = true
+
+[node name="firing_rate" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_swmpf")
+
+[connection signal="pressed" from="Control/Control/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

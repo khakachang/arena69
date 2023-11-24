@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1aluaa5s1q4f"]
+
+[ext_resource type="Texture2D" uid="uid://cc6px8e0o2ci2" path="res://Free 2D Animated Vector Game Character Sprites/Weapons/weaponR2.png" id="1_5l8gy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l1gi4"]
+radius = 15.0
+height = 60.0
+
+[node name="desi_katta_dropeed" type="Area2D" groups=["desi_katta"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28, -46)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_5l8gy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(36, -6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_l1gi4")

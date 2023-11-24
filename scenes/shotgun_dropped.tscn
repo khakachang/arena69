@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3mcpdt84dtyo"]
+
+[ext_resource type="Texture2D" uid="uid://bldd133h8q8ew" path="res://Free 2D Animated Vector Game Character Sprites/Weapons/weaponR3.png" id="1_i1yrm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_suiov"]
+height = 64.0
+
+[node name="shotgun_dropped" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_suiov")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, -26)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_i1yrm")

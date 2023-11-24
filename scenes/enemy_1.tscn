@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://ypbn0dne8h53"]
+
+[ext_resource type="Texture2D" uid="uid://bi2p0ladlx8ic" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_0.png" id="1_ruqyi"]
+[ext_resource type="Script" path="res://scripts/enemy_1.gd" id="1_sjhbe"]
+[ext_resource type="Texture2D" uid="uid://dltbkw1i3yuob" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_1.png" id="2_ibl3i"]
+[ext_resource type="Texture2D" uid="uid://cpntmixb2hoom" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_2.png" id="3_ci3q6"]
+[ext_resource type="Texture2D" uid="uid://dp0ka6ys44k76" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_3.png" id="4_ub2ca"]
+[ext_resource type="Texture2D" uid="uid://dcwsqhlvfvkew" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_4.png" id="5_ps18r"]
+[ext_resource type="Texture2D" uid="uid://bg5otgied3nkp" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_5.png" id="6_f2308"]
+[ext_resource type="Texture2D" uid="uid://daemyf7u25js1" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_6.png" id="7_b6iu0"]
+[ext_resource type="Texture2D" uid="uid://bfc07a7rmj1lf" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_7.png" id="8_et5im"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnhxh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ruqyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ibl3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ci3q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ub2ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ps18r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f2308")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b6iu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_et5im")
+}],
+"loop": true,
+"name": &"enemy_walk",
+"speed": 15.0
+}]
+
+[node name="enemy_1" type="CharacterBody2D"]
+script = ExtResource("1_sjhbe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_bnhxh")
+animation = &"enemy_walk"
+frame = 1
+frame_progress = 0.417137
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

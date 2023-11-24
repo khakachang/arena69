@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ths4ono7y8wa"]
+
+[ext_resource type="Texture2D" uid="uid://y3p33k848u4l" path="res://Free 2D Animated Vector Game Character Sprites/Weapons/weaponR1.png" id="1_dgpsv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qdub4"]
+radius = 18.0
+height = 70.0
+
+[node name="m469" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qdub4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(19, -27)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_dgpsv")
+
+[node name="muzzle" type="Sprite2D" parent="."]
+position = Vector2(62, -3)
+scale = Vector2(0.03, 0.03)
