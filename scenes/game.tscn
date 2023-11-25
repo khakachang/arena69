@@ -474,3 +474,6 @@ texture = ExtResource("1_a4aek")
 [node name="enemy_spawn_time" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="pistol_firerate" type="Timer" parent="."]
+one_shot = true

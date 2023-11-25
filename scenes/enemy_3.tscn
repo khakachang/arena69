@@ -38,6 +38,7 @@ animations = [{
 }]
 
 [node name="enemy_3" type="CharacterBody2D"]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_0qvvn")
 

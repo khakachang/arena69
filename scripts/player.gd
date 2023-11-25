@@ -6,9 +6,6 @@ var desi_katta_scene = load("res://scenes/desi_katta.tscn")
 var m469_scene = load("res://scenes/m_469.tscn")
 
 
-
-var bullet_scene = load("res://scenes/bullet.tscn")
-
 var gun_number = 0
 var current_gun = null
 var move_vector := Vector2.ZERO
