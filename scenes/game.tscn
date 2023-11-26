@@ -477,3 +477,5 @@ one_shot = true
 
 [node name="pistol_firerate" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="fired" from="." to="player" method="_on_game_fired"]

@@ -1,4 +1,7 @@
 extends Node2D
+
+signal fired
+
 var rg = RandomNumberGenerator.new()
 
 var enemy_1_scene = load("res://scenes/enemy_1.tscn")
@@ -8,7 +11,7 @@ var enemy_4_scene = load("res://scenes/enemy_4.tscn")
 
 var enemy_no := 0
 var enemies = []
-var nearest_enemy
+var nearest_enemy : Object
 
 var bullet_scene = load("res://scenes/bullet.tscn")
 
@@ -22,17 +25,22 @@ func _process(delta):
 		if enemy_distance < shortest_distance:
 			shortest_distance = enemy_distance
 			nearest_enemy = enemy
+	
+	
+	if nearest_enemy != null:
 		if $"player".position.distance_to(nearest_enemy.position) < 300:
 			$"player".current_gun.look_at(nearest_enemy.position)
-			var bullet = bullet_scene.instantiate()
-			bullet.transform = $"player".current_gun.get_node("muzzle").global_transform
-			bullet.velocity = Vector2(cos($"player".current_gun.rotation), sin($"player".current_gun.rotation))
-			if $"pistol_firerate".is_stopped():
-				
-				add_child(bullet)
-				$"pistol_firerate".start()
+			fired.emit()
+			#if $"pistol_firerate".is_stopped():
+				#var bullet = bullet_scene.instantiate()
+				#bullet.global_transform = $"player".current_gun.get_node("muzzle").global_transform
+				#bullet.velocity = Vector2(cos($"player".current_gun.rotation), sin($"player".current_gun.rotation))
+				#add_child(bullet)
+				#$"pistol_firerate".start()
 		else:
 			$"player".current_gun.rotation = $"player/Control/movement_jt".output.angle()
+	
+	
 	#Spawning enemies
 	if $"enemy_spawn_time".is_stopped():
 		enemy_no = rg.randi_range(1,4)
