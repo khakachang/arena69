@@ -19,24 +19,21 @@ func _process(delta):
 	
 	var shortest_distance = float(INF)
 	for enemy in enemies:
-		enemy.player_position = $"player".position
-		
-		var enemy_distance = $"player".position.distance_to(enemy.position)
-		if enemy_distance < shortest_distance:
-			shortest_distance = enemy_distance
-			nearest_enemy = enemy
-	
+		if enemy == null:
+			enemies.erase(enemy)
+		if enemy != null:
+			enemy.player_position = $"player".position
+			
+			var enemy_distance = $"player".position.distance_to(enemy.position)
+			if enemy_distance < shortest_distance:
+				shortest_distance = enemy_distance
+				nearest_enemy = enemy
 	
 	if nearest_enemy != null:
 		if $"player".position.distance_to(nearest_enemy.position) < 300:
 			$"player".current_gun.look_at(nearest_enemy.position)
 			fired.emit()
-			#if $"pistol_firerate".is_stopped():
-				#var bullet = bullet_scene.instantiate()
-				#bullet.global_transform = $"player".current_gun.get_node("muzzle").global_transform
-				#bullet.velocity = Vector2(cos($"player".current_gun.rotation), sin($"player".current_gun.rotation))
-				#add_child(bullet)
-				#$"pistol_firerate".start()
+
 		else:
 			$"player".current_gun.rotation = $"player/Control/movement_jt".output.angle()
 	
@@ -68,3 +65,4 @@ func _process(delta):
 			enemies.append(enemy)
 		
 		$"enemy_spawn_time".start()
+

@@ -1,17 +1,60 @@
-[gd_scene load_steps=12 format=3 uid="uid://ypbn0dne8h53"]
+[gd_scene load_steps=24 format=3 uid="uid://ypbn0dne8h53"]
 
 [ext_resource type="Texture2D" uid="uid://bi2p0ladlx8ic" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_0.png" id="1_ruqyi"]
 [ext_resource type="Script" path="res://scripts/enemy_1.gd" id="1_sjhbe"]
 [ext_resource type="Texture2D" uid="uid://dltbkw1i3yuob" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_1.png" id="2_ibl3i"]
+[ext_resource type="Texture2D" uid="uid://bfle0ls110p3a" path="res://Free 2D Animated Vector Game Character Sprites/Extras/shadow.png" id="2_mp8dk"]
 [ext_resource type="Texture2D" uid="uid://cpntmixb2hoom" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_2.png" id="3_ci3q6"]
+[ext_resource type="Texture2D" uid="uid://deqlqbggekf4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/roll_0.png" id="3_jxyko"]
+[ext_resource type="Texture2D" uid="uid://dx1eentdyeuuf" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/hit_0.png" id="3_l8owc"]
+[ext_resource type="Texture2D" uid="uid://lm3p1n8ocxk7" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/hit_1.png" id="4_dppq4"]
 [ext_resource type="Texture2D" uid="uid://dp0ka6ys44k76" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_3.png" id="4_ub2ca"]
+[ext_resource type="Texture2D" uid="uid://c024mogcg6ca6" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/roll_1.png" id="4_uy26d"]
+[ext_resource type="Texture2D" uid="uid://b5dtkjlu0wqjm" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/hit_2.png" id="5_4cjnp"]
+[ext_resource type="Texture2D" uid="uid://cwup255qujjf4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/roll_2.png" id="5_hkpeo"]
 [ext_resource type="Texture2D" uid="uid://dcwsqhlvfvkew" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_4.png" id="5_ps18r"]
 [ext_resource type="Texture2D" uid="uid://bg5otgied3nkp" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_5.png" id="6_f2308"]
+[ext_resource type="Texture2D" uid="uid://csks1ndnsl88n" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/roll_3.png" id="6_stevj"]
 [ext_resource type="Texture2D" uid="uid://daemyf7u25js1" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_6.png" id="7_b6iu0"]
+[ext_resource type="Texture2D" uid="uid://ixx7w21c7xha" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/roll_4.png" id="7_rlfrt"]
 [ext_resource type="Texture2D" uid="uid://bfc07a7rmj1lf" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Enemies/Enemy 1/walk_7.png" id="8_et5im"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnhxh"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jxyko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uy26d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hkpeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_stevj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rlfrt")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l8owc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dppq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4cjnp")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ruqyi")
@@ -38,25 +81,73 @@ animations = [{
 "texture": ExtResource("8_et5im")
 }],
 "loop": true,
-"name": &"enemy_walk",
+"name": &"walk",
 "speed": 15.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk0kx"]
-radius = 22.0
-height = 62.0
+radius = 19.0
+height = 54.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ya6a"]
+bg_color = Color(0, 0, 0, 0.196078)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcnwd"]
+bg_color = Color(0.792157, 0, 0.0705882, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r4vv7"]
+radius = 19.0
+height = 54.0
 
 [node name="enemy_1" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_sjhbe")
 
+[node name="shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.317647)
+z_index = -1
+position = Vector2(0, 32)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_mp8dk")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -39)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_bnhxh")
-animation = &"enemy_walk"
-frame = 1
-frame_progress = 0.417137
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_hk0kx")
+
+[node name="healthbar" type="ProgressBar" parent="."]
+offset_left = -48.0
+offset_top = -59.0
+offset_right = 51.0
+offset_bottom = -36.0
+theme_override_styles/background = SubResource("StyleBoxFlat_5ya6a")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pcnwd")
+max_value = 10.0
+value = 10.0
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_r4vv7")
+
+[node name="hit_animation" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="hit_animation" to="." method="_on_hit_animation_timeout"]

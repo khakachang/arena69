@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqnm375m502rr"]
+
+[ext_resource type="Script" path="res://scripts/shotgun_bullet.gd" id="1_e3tan"]
+[ext_resource type="Texture2D" uid="uid://8qu0pxlmbj4m" path="res://Free 2D Animated Vector Game Character Sprites/Extras/shotgun_bullet.png" id="1_kdy2w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hiqee"]
+radius = 500.0
+
+[node name="shotgun_bullet" type="Area2D" groups=["shotgun_bullet"]]
+scale = Vector2(0.06, 0.06)
+script = ExtResource("1_e3tan")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kdy2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hiqee")
+
+[node name="bullet_lifespan" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="bullet_lifespan" to="." method="_on_bullet_lifespan_timeout"]

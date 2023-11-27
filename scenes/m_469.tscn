@@ -20,4 +20,4 @@ texture = ExtResource("1_dgpsv")
 
 [node name="muzzle" type="Sprite2D" parent="."]
 position = Vector2(62, -3)
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.02, 0.02)
