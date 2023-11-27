@@ -19,7 +19,8 @@ func _ready():
 	current_gun.position = Vector2(2,14)
 	gun_number = 1
 	add_child(current_gun)
-
+	$"amo_bar".max_value = 5
+	$"amo_bar".value = 5
 func _physics_process(delta):
 	move_vector.x = Input.get_axis("move_left", "move_right")
 	move_vector.y = Input.get_axis("move_up", "move_down")
@@ -69,12 +70,15 @@ func shotgun(area):
 
 func _on_game_fired():
 	if gun_number == 1:
-		if $"desi_katta_firerate".is_stopped():
+		if $"desi_katta_firerate".is_stopped() and $"refil_timer".is_stopped():
 			var bullet = desi_katta_bullet.instantiate()
 			bullet.global_transform = current_gun.get_node("muzzle").global_transform
 			bullet.velocity = Vector2(cos(current_gun.rotation), sin(current_gun.rotation))
 			get_parent().add_child(bullet)
+			$"amo_bar".value -= 1
 			$"desi_katta_firerate".start()
+			if $"amo_bar".value == 0:
+				$"refil_timer".start()
 	if gun_number ==2:
 		if $"m469_firerate".is_stopped():
 			var bullet = m469_bullet.instantiate()
@@ -103,3 +107,7 @@ func _on_game_fired():
 			get_parent().add_child(bullet3)
 			$"shotgun_firerate".start()
 			
+
+
+func _on_refil_timer_timeout():
+	$"amo_bar".value = $"amo_bar".max_value

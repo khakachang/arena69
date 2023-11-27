@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://skplvjhtmgn2"]
+[gd_scene load_steps=38 format=3 uid="uid://skplvjhtmgn2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_i41an"]
 [ext_resource type="Texture2D" uid="uid://cnlsx57hdknua" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_0.png" id="1_xxsxw"]
@@ -157,6 +157,20 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqs1o"]
+bg_color = Color(0, 0, 0, 0.196078)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxbvs"]
+bg_color = Color(0.862745, 0.701961, 0.443137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("movementJS")]
 motion_mode = 1
 script = ExtResource("1_i41an")
@@ -225,13 +239,27 @@ one_shot = true
 
 [node name="healthbar" type="ProgressBar" parent="."]
 offset_left = -26.0
-offset_top = -48.0
+offset_top = -52.0
 offset_right = 26.0
-offset_bottom = -36.0
+offset_bottom = -43.0
 theme_override_styles/background = SubResource("StyleBoxFlat_h4n1i")
 theme_override_styles/fill = SubResource("StyleBoxFlat_i0w46")
 max_value = 50.0
 value = 50.0
 show_percentage = false
 
+[node name="amo_bar" type="ProgressBar" parent="."]
+offset_left = -25.0
+offset_top = -40.0
+offset_right = 26.0
+offset_bottom = -35.0
+theme_override_styles/background = SubResource("StyleBoxFlat_iqs1o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uxbvs")
+value = 64.42
+show_percentage = false
+
+[node name="refil_timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="refil_timer" to="." method="_on_refil_timer_timeout"]
