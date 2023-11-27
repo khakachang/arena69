@@ -15,8 +15,9 @@ var nearest_enemy : Object
 
 var bullet_scene = load("res://scenes/bullet.tscn")
 
+
 func _process(delta):
-	
+
 	var shortest_distance = float(INF)
 	for enemy in enemies:
 		if enemy == null:

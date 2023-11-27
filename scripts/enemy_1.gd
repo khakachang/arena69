@@ -5,6 +5,9 @@ var player_position := Vector2.ZERO
 
 var is_playing_hit = false
 var can_attack = false
+
+var gem_scene = load("res://scenes/gem.tscn")
+
 func _physics_process(delta):
 	velocity = position.direction_to(player_position) * 50
 	
@@ -29,7 +32,7 @@ func _on_area_2d_area_entered(area):
 			$"hit_animation".start()
 			$"healthbar".value -= 1
 		if $"healthbar".value == 0:
-			queue_free()
+			call_deferred("drop_item")
 	
 	if area.is_in_group("m469_bullet"):
 		if $"healthbar".value != 0:
@@ -38,7 +41,7 @@ func _on_area_2d_area_entered(area):
 			$"hit_animation".start()
 			$"healthbar".value -= 1
 		if $"healthbar".value == 0:
-			queue_free()
+			call_deferred("drop_item")
 	
 	if area.is_in_group("shotgun_bullet"):
 		if $"healthbar".value != 0:
@@ -47,7 +50,7 @@ func _on_area_2d_area_entered(area):
 			$"hit_animation".start()
 			$"healthbar".value -= 5
 		if $"healthbar".value == 0:
-			queue_free()
+			call_deferred("drop_item")
 
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("player"):
@@ -55,4 +58,8 @@ func _on_area_2d_area_exited(area):
 func _on_hit_animation_timeout():
 	is_playing_hit = false
 
-
+func drop_item():
+	var gem = gem_scene.instantiate()
+	gem.position = position
+	get_parent().add_child(gem)
+	queue_free()

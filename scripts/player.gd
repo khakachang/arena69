@@ -33,7 +33,7 @@ func _physics_process(delta):
 	velocity = move_vector.normalized() * delta * 10000
 	
 	move_and_slide()
-	print($"refil_timer".time_left)
+
 	if is_reloading:
 		$"Control/reloading_bar".value = $"refil_timer".time_left
 func _on_area_2d_area_entered(area):
@@ -58,7 +58,9 @@ func _on_area_2d_area_entered(area):
 		gun_number = 3
 		call_deferred("shotgun", area)
 	
-	
+	if area.is_in_group("gem"):
+		$"Control/gem_indicator".text = str(int($"Control/gem_indicator".text) + 1)
+		area.queue_free()
 
 func m469(area):
 	print("m469 picked up")

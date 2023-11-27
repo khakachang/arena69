@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://skplvjhtmgn2"]
+[gd_scene load_steps=41 format=3 uid="uid://skplvjhtmgn2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_i41an"]
 [ext_resource type="Texture2D" uid="uid://cnlsx57hdknua" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_0.png" id="1_xxsxw"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://brx5nvo4jgtq6" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_5.png" id="26_cbvfr"]
 [ext_resource type="Texture2D" uid="uid://sto18pkf7qro" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_6.png" id="27_5vbcc"]
 [ext_resource type="Texture2D" uid="uid://f5ok3akakk77" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_7.png" id="28_h6cqc"]
+[ext_resource type="Texture2D" uid="uid://lltu6i8snim4" path="res://Free 2D Animated Vector Game Character Sprites/Extras/Diamong icon.png" id="31_da62x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ktnn"]
 animations = [{
@@ -238,6 +239,24 @@ action_right = "move_right"
 action_up = "move_up"
 action_down = "move_down"
 metadata/_edit_use_anchors_ = true
+
+[node name="gem_indicator" type="Label" parent="Control"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_top = 36.0
+offset_right = -25.0
+offset_bottom = 94.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "0"
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/gem_indicator"]
+position = Vector2(-17, 30)
+scale = Vector2(0.39, 0.38)
+texture = ExtResource("31_da62x")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -2448
