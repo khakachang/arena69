@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://skplvjhtmgn2"]
+[gd_scene load_steps=40 format=3 uid="uid://skplvjhtmgn2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_i41an"]
 [ext_resource type="Texture2D" uid="uid://cnlsx57hdknua" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_0.png" id="1_xxsxw"]
@@ -139,6 +139,20 @@ animations = [{
 radius = 17.0
 height = 40.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4sajd"]
+bg_color = Color(0, 0, 0, 0.196078)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfk2y"]
+bg_color = Color(0, 0.423529, 0.831373, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swmpf"]
 radius = 19.0
 height = 52.0
@@ -194,6 +208,20 @@ position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_5qa3x")
 
 [node name="Control" type="CanvasLayer" parent="."]
+
+[node name="reloading_bar" type="ProgressBar" parent="Control"]
+anchors_preset = -1
+anchor_left = 0.359568
+anchor_top = 0.302997
+anchor_right = 0.640432
+anchor_bottom = 0.306812
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_4sajd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xfk2y")
+value = 15.96
+show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [node name="movement_jt" parent="Control" instance=ExtResource("20_80lbi")]
 anchors_preset = -1

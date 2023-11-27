@@ -17,7 +17,7 @@ func _physics_process(delta):
 			$"AnimatedSprite2D".play("walk")
 	else:
 		$"AnimatedSprite2D".play("attack")
-		get_parent().get_node("player").get_node("healthbar").value -= 1 * delta
+		get_parent().get_node("player").get_node("healthbar").value -= 10 * delta
 		
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("player"):
