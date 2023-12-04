@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://cwlbajty04ob2"]
+
+[ext_resource type="Texture2D" uid="uid://chu3egv5a3f1j" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/idle_0.png" id="4_lup35"]
+[ext_resource type="Texture2D" uid="uid://d3bbo32qp8r7q" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/idle_1.png" id="5_hg5rq"]
+[ext_resource type="Texture2D" uid="uid://c2de8sbchxls7" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/idle_2.png" id="6_jv3n0"]
+[ext_resource type="Texture2D" uid="uid://bu12n7ijhk76y" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_0.png" id="7_rd3ay"]
+[ext_resource type="Texture2D" uid="uid://coew4l6roa3e2" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/idle_3.png" id="7_ucdoh"]
+[ext_resource type="Texture2D" uid="uid://dwo23oporpfk3" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_1.png" id="8_7cjnv"]
+[ext_resource type="Texture2D" uid="uid://vhnlf7qyvid0" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/idle_4.png" id="8_ay8kk"]
+[ext_resource type="Texture2D" uid="uid://bggdtqgps5dc5" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_2.png" id="9_fh781"]
+[ext_resource type="Texture2D" uid="uid://cprqjw1ewn2wt" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/idle_5.png" id="9_xoufg"]
+[ext_resource type="Texture2D" uid="uid://drbp3kl1eg13" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_3.png" id="10_d0gxr"]
+[ext_resource type="Texture2D" uid="uid://dwq7n7ct1hb4x" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_4.png" id="11_nfx1e"]
+[ext_resource type="Texture2D" uid="uid://vmwampjexj4s" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_5.png" id="12_7xy1e"]
+[ext_resource type="Texture2D" uid="uid://qo4kn7eog0n1" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_6.png" id="13_l7gq6"]
+[ext_resource type="Texture2D" uid="uid://ejet7cqyc1g4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 2/no hands/walk_7.png" id="14_supym"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lup35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hg5rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jv3n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ucdoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ay8kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xoufg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_rd3ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7cjnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fh781")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d0gxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nfx1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7xy1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l7gq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_supym")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 15.0
+}]

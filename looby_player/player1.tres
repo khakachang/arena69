@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://fiibip5r74tt"]
+
+[ext_resource type="Texture2D" uid="uid://nuu6q4oljyqo" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/with hands/idle_0.png" id="1_2ludg"]
+[ext_resource type="Texture2D" uid="uid://bditkwqtshaj3" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/with hands/idle_1.png" id="2_weaus"]
+[ext_resource type="Texture2D" uid="uid://b55gi45k4ykt7" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/with hands/idle_2.png" id="3_6j8jl"]
+[ext_resource type="Texture2D" uid="uid://dhci8bi47puh8" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/with hands/idle_3.png" id="4_swt38"]
+[ext_resource type="Texture2D" uid="uid://bfn8m2dden88i" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/with hands/idle_4.png" id="5_ofx3w"]
+[ext_resource type="Texture2D" uid="uid://c10qb3ihbk5sw" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/with hands/idle_5.png" id="6_qbdco"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2ludg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_weaus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6j8jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_swt38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ofx3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qbdco")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]

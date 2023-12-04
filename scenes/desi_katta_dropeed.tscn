@@ -1,19 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1aluaa5s1q4f"]
+[gd_scene load_steps=7 format=3 uid="uid://d1aluaa5s1q4f"]
 
 [ext_resource type="Texture2D" uid="uid://cc6px8e0o2ci2" path="res://Free 2D Animated Vector Game Character Sprites/Weapons/weaponR2.png" id="1_5l8gy"]
+[ext_resource type="Script" path="res://scripts/desi_katta_dropeed.gd" id="1_bx1us"]
+[ext_resource type="Texture2D" uid="uid://bfle0ls110p3a" path="res://Free 2D Animated Vector Game Character Sprites/Extras/shadow.png" id="2_qkosn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l1gi4"]
 radius = 15.0
 height = 60.0
 
+[sub_resource type="Animation" id="Animation_x1hfy"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(28, -46), Vector2(28, -56)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgb2l"]
+_data = {
+"idle": SubResource("Animation_x1hfy")
+}
+
 [node name="desi_katta_dropeed" type="Area2D" groups=["desi_katta"]]
+script = ExtResource("1_bx1us")
+
+[node name="shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.317647)
+position = Vector2(34.5, 17)
+scale = Vector2(0.1525, 0.1375)
+texture = ExtResource("2_qkosn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(28, -46)
+position = Vector2(28, -49.6501)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("1_5l8gy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(36, -6)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_l1gi4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fgb2l")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

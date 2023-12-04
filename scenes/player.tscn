@@ -1,140 +1,19 @@
-[gd_scene load_steps=41 format=3 uid="uid://skplvjhtmgn2"]
+[gd_scene load_steps=23 format=3 uid="uid://skplvjhtmgn2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_i41an"]
-[ext_resource type="Texture2D" uid="uid://cnlsx57hdknua" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_0.png" id="1_xxsxw"]
-[ext_resource type="Texture2D" uid="uid://ckpvciostwrm5" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_1.png" id="2_4sgra"]
 [ext_resource type="Texture2D" uid="uid://bfle0ls110p3a" path="res://Free 2D Animated Vector Game Character Sprites/Extras/shadow.png" id="2_xxs01"]
-[ext_resource type="Texture2D" uid="uid://11x2i3u20kky" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_2.png" id="3_kkv0p"]
-[ext_resource type="Texture2D" uid="uid://0i6eabf321er" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_3.png" id="4_v1njn"]
-[ext_resource type="Texture2D" uid="uid://b0jknwe1q66k4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_4.png" id="5_ta7cg"]
-[ext_resource type="Texture2D" uid="uid://ckkse3lkjxiwg" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_5.png" id="6_8q2px"]
-[ext_resource type="Texture2D" uid="uid://bfunviu8a7yig" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_6.png" id="7_2h1jb"]
-[ext_resource type="Texture2D" uid="uid://b5ngohtyet8u5" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_7.png" id="8_m8737"]
-[ext_resource type="Texture2D" uid="uid://bf7sj4rdiik0s" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_8.png" id="9_2jw6b"]
-[ext_resource type="Texture2D" uid="uid://ut8qbqlnxfs4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/death_9.png" id="10_54ej7"]
-[ext_resource type="Texture2D" uid="uid://duhar8k7qlvm4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/hit_0.png" id="11_65hde"]
-[ext_resource type="Texture2D" uid="uid://bpylbn35ou2tw" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/hit_1.png" id="12_44u5j"]
-[ext_resource type="Texture2D" uid="uid://pm2y0k7vufiq" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/hit_2.png" id="13_76rjg"]
-[ext_resource type="Texture2D" uid="uid://da0qpc6e1nvdg" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_0.png" id="14_ydq56"]
-[ext_resource type="Texture2D" uid="uid://dvqxje7tapok" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_1.png" id="15_xq58f"]
-[ext_resource type="Texture2D" uid="uid://b7ftapwurpuys" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_2.png" id="16_ex11d"]
-[ext_resource type="Texture2D" uid="uid://rrhp10ty03cn" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_3.png" id="17_l4n2b"]
-[ext_resource type="Texture2D" uid="uid://x3j7e71ud2yd" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_4.png" id="18_1203p"]
-[ext_resource type="Texture2D" uid="uid://bkxlb8bb7qs4l" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/idle_5.png" id="19_a04tn"]
+[ext_resource type="SpriteFrames" uid="uid://c45ngix03wcwe" path="res://AnimtedSprite/player4.tres" id="3_m00aq"]
+[ext_resource type="AudioStream" uid="uid://511tra0w712k" path="res://shotgun_effects/080902_shotgun-39753.mp3" id="6_0emm5"]
+[ext_resource type="AudioStream" uid="uid://brs3l66scnexn" path="res://shotgun_effects/sxp_shotgun_rack_02-46334.mp3" id="7_nmxfe"]
+[ext_resource type="AudioStream" uid="uid://d4lb0unljj01u" path="res://m469_sound/GUNShotg_Rifle shot 2 (ID 2854)_BSB.wav" id="8_wr4yy"]
+[ext_resource type="AudioStream" uid="uid://bv285aw0kyflp" path="res://pistol_sound/pistol-cock-6014.mp3" id="9_6q83r"]
+[ext_resource type="AudioStream" uid="uid://cejwf5v3ott1q" path="res://m469_sound/shotgun-reload-fx_279bpm.wav" id="10_udcyu"]
+[ext_resource type="AudioStream" uid="uid://dce22iybyhfxl" path="res://pistol_sound/single-pistol-gunshot-3-101923.mp3" id="11_wbdnd"]
+[ext_resource type="AudioStream" uid="uid://blreobiiys2ph" path="res://lettuce_pick_sound/mixkit-extra-bonus-in-a-video-game-2045.wav" id="12_5wa0h"]
+[ext_resource type="AudioStream" uid="uid://cm7bin3h02as6" path="res://gem_collect_sound/notification-positive-bleep-joshua-chivers-1-00-01.mp3" id="13_l45fg"]
+[ext_resource type="AudioStream" uid="uid://dwyiksqqix3gf" path="res://gun_pick_sound/mixkit-explainer-video-game-alert-sweep-236.wav" id="14_y05vo"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://joystick/virtual_joystick.tscn" id="20_80lbi"]
-[ext_resource type="Texture2D" uid="uid://mc774hpqfni4" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_0.png" id="21_u213s"]
-[ext_resource type="Texture2D" uid="uid://30e2igdlemt6" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_1.png" id="22_8t6ne"]
-[ext_resource type="Texture2D" uid="uid://d1fjkgk0kluty" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_2.png" id="23_wk40p"]
-[ext_resource type="Texture2D" uid="uid://u0sxhy4opj7n" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_3.png" id="24_j5bre"]
-[ext_resource type="Texture2D" uid="uid://cwsce7v82i8ly" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_4.png" id="25_janhx"]
-[ext_resource type="Texture2D" uid="uid://brx5nvo4jgtq6" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_5.png" id="26_cbvfr"]
-[ext_resource type="Texture2D" uid="uid://sto18pkf7qro" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_6.png" id="27_5vbcc"]
-[ext_resource type="Texture2D" uid="uid://f5ok3akakk77" path="res://Free 2D Animated Vector Game Character Sprites/Full body animated characters/Char 1/no hands/walk_7.png" id="28_h6cqc"]
 [ext_resource type="Texture2D" uid="uid://lltu6i8snim4" path="res://Free 2D Animated Vector Game Character Sprites/Extras/Diamong icon.png" id="31_da62x"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3ktnn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_xxsxw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_4sgra")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_kkv0p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_v1njn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_ta7cg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_8q2px")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_2h1jb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_m8737")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_2jw6b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_54ej7")
-}],
-"loop": false,
-"name": &"death",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_65hde")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_44u5j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_76rjg")
-}],
-"loop": false,
-"name": &"hit",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_ydq56")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_xq58f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_ex11d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_l4n2b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_1203p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_a04tn")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("21_u213s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_8t6ne")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_wk40p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_j5bre")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_janhx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_cbvfr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_5vbcc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_h6cqc")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 15.0
-}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qa3x"]
 radius = 17.0
@@ -187,9 +66,14 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("movementJS")]
+collision_layer = 15
+collision_mask = 15
 motion_mode = 1
 script = ExtResource("1_i41an")
 movementJS = NodePath("Control/movement_jt")
+m469_mag_size = 25
+desi_katta_mag_size = 15
+desi_katta_reload_time = 1.0
 
 [node name="shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.317647)
@@ -201,8 +85,8 @@ texture = ExtResource("2_xxs01")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -41)
 scale = Vector2(0.1, 0.1)
-sprite_frames = SubResource("SpriteFrames_3ktnn")
-animation = &"idle"
+sprite_frames = ExtResource("3_m00aq")
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
@@ -212,15 +96,15 @@ shape = SubResource("CapsuleShape2D_5qa3x")
 
 [node name="reloading_bar" type="ProgressBar" parent="Control"]
 anchors_preset = -1
-anchor_left = 0.359568
-anchor_top = 0.302997
-anchor_right = 0.640432
-anchor_bottom = 0.306812
-grow_horizontal = 2
+anchor_left = 0.0648148
+anchor_top = 0.326431
+anchor_right = 0.0787037
+anchor_bottom = 0.674114
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_4sajd")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xfk2y")
 value = 15.96
+fill_mode = 3
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
@@ -244,26 +128,31 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -48.0
-offset_top = 36.0
-offset_right = -25.0
-offset_bottom = 94.0
+offset_left = -63.0
+offset_top = 30.0
+offset_right = -29.0
+offset_bottom = 113.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 60
 text = "0"
 vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/gem_indicator"]
-position = Vector2(-17, 30)
-scale = Vector2(0.39, 0.38)
+position = Vector2(-29.75, 42)
+scale = Vector2(0.605, 0.56)
 texture = ExtResource("31_da62x")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.3, 1.3)
 limit_left = -2448
 limit_top = -2448
 limit_right = 2449
 limit_bottom = 2449
 position_smoothing_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
 
 [node name="firing_rate" type="Timer" parent="."]
 wait_time = 0.5
@@ -275,6 +164,7 @@ one_shot = true
 shape = SubResource("CapsuleShape2D_swmpf")
 
 [node name="desi_katta_firerate" type="Timer" parent="."]
+wait_time = 0.1
 one_shot = true
 
 [node name="m469_firerate" type="Timer" parent="."]
@@ -307,6 +197,36 @@ show_percentage = false
 
 [node name="refil_timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="shotgun_fire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_0emm5")
+
+[node name="shotgun_reload" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_nmxfe")
+
+[node name="m469_fire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_wr4yy")
+
+[node name="m469_reload" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_udcyu")
+
+[node name="pistol_reload" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_6q83r")
+
+[node name="pistol_fire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_wbdnd")
+volume_db = -10.0
+
+[node name="lettuce_pick_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_5wa0h")
+
+[node name="gem_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_l45fg")
+volume_db = 5.0
+
+[node name="gun_pick_up_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_y05vo")
+volume_db = 10.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="refil_timer" to="." method="_on_refil_timer_timeout"]

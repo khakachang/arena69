@@ -110,6 +110,7 @@ height = 54.0
 [node name="enemy_1" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_sjhbe")
+desi_katta_dmg = 0.8
 
 [node name="shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.317647)
@@ -129,14 +130,15 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_hk0kx")
 
 [node name="healthbar" type="ProgressBar" parent="."]
-offset_left = -48.0
-offset_top = -59.0
-offset_right = 51.0
-offset_bottom = -36.0
+offset_left = -16.0
+offset_top = -40.0
+offset_right = 17.0
+offset_bottom = -34.0
 theme_override_styles/background = SubResource("StyleBoxFlat_5ya6a")
 theme_override_styles/fill = SubResource("StyleBoxFlat_pcnwd")
 max_value = 10.0
 value = 10.0
+show_percentage = false
 
 [node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
 

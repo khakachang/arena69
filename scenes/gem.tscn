@@ -43,7 +43,7 @@ _data = {
 }
 
 [node name="gem" type="Area2D" groups=["gem"]]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_l60v5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
