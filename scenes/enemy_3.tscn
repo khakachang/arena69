@@ -60,7 +60,6 @@ collision_layer = 4
 collision_mask = 4
 motion_mode = 1
 script = ExtResource("1_0qvvn")
-desi_katta_dmg = 0.8
 
 [node name="shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.317647)

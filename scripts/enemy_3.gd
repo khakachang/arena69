@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
-@export var desi_katta_dmg := 1.0
-@export var m469_dmg := 1.0
-@export var shotgun_dmg := 3.0
+
 @export var dmg_to_player := 10.0
 var player_position := Vector2.ZERO
 var gem_scene = load("res://scenes/gem.tscn")
@@ -17,9 +15,15 @@ func _physics_process(delta):
 
 
 func _on_area_2d_area_entered(area):
+	#Gun Config
+	var gunConfig = ConfigFile.new()
+	gunConfig.load("user://gunSetting.cfg")
+	var desi_dmg = gunConfig.get_value("Desi_Katta", "damage")
+	var m469_dmg = gunConfig.get_value("m469", "damage")
+	var shotgun_dmg = gunConfig.get_value("shotgun", "damage")
 	if area.is_in_group("desi_katta_bullet"):
 		if $"healthbar".value != 0:
-			$"healthbar".value -= desi_katta_dmg
+			$"healthbar".value -= desi_dmg
 		if $"healthbar".value == 0:
 			call_deferred("drop_item")
 	

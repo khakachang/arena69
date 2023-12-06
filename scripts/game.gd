@@ -9,6 +9,11 @@ var enemy_2_scene = load("res://scenes/enemy_2.tscn")
 var enemy_3_scene = load("res://scenes/enemy_3.tscn")
 var enemy_4_scene = load("res://scenes/enemy_4.tscn")
 var lettuce_scene = load("res://scenes/lettuce.tscn")
+
+var desi_scene = load("res://scenes/desi_katta_dropeed.tscn")
+var m4_scene = load("res://scenes/m_469_dropped.tscn")
+var shotgun_scene = load("res://scenes/shotgun_dropped.tscn")
+
 var enemy_no := 0
 var enemies = []
 var nearest_enemy : Object
@@ -17,7 +22,7 @@ var bullet_scene = load("res://scenes/bullet.tscn")
 var kills = 0
 var death = false
 func _ready():
-	$"msg/play".visible = false
+	$"msg/BoxContainer".visible = false
 	$"enemy_spawn_time".wait_time = 3.5
 	$"first_enemy_timer".start()
 	
@@ -33,6 +38,8 @@ func _ready():
 		if config.get_value("PlayerData", "player") == 4:
 			$"player/AnimatedSprite2D".sprite_frames = load("res://AnimtedSprite/player4.tres")
 func _process(delta):
+	
+	
 	$"msg/Label".text = "Enemy spawning in " + str(round($"first_enemy_timer".time_left * 100) / 100)
 	if death == false:
 		
@@ -73,7 +80,27 @@ func _process(delta):
 				lettuce.position = lettuce_pos
 				add_child(lettuce)
 				$"lettuce_spawn_time".start()
-				
+			#spawing gun
+			if $"gun_spawn_time".is_stopped() and $"first_enemy_timer".is_stopped():
+				var gun_to_spawn = rg.randi_range(1,3)
+				if gun_to_spawn == 1:
+					var gun_pos = Vector2(rg.randf_range(-2448,2449), rg.randf_range(-2448,2449))
+					var gun = desi_scene.instantiate()
+					gun.position = gun_pos
+					add_child(gun)
+					$"gun_spawn_time".start()
+				if gun_to_spawn == 2:
+					var gun_pos = Vector2(rg.randf_range(-2448,2449), rg.randf_range(-2448,2449))
+					var gun = m4_scene.instantiate()
+					gun.position = gun_pos
+					add_child(gun)
+					$"gun_spawn_time".start()
+				if gun_to_spawn == 3:
+					var gun_pos = Vector2(rg.randf_range(-2448,2449), rg.randf_range(-2448,2449))
+					var gun = shotgun_scene.instantiate()
+					gun.position = gun_pos
+					add_child(gun)
+					$"gun_spawn_time".start()
 			#Spawning enemies
 			if $"enemy_spawn_time".is_stopped() and $"first_enemy_timer".is_stopped():
 				var spawn_pos = Vector2(rg.randf_range(-2448,2449), rg.randf_range(-2448,2449))
@@ -138,9 +165,9 @@ func spawn_enemies(spawn_location):
 	if enemy_no == 3:
 		var enemy = enemy_3_scene.instantiate()
 		if kills >= 10:
-			enemy.speed = 120
+			enemy.speed = 100
 		if kills >= 15:
-			enemy.speed = 150
+			enemy.speed = 120
 		enemy.position = spawn_location
 		add_child(enemy)
 		enemies.append(enemy)
@@ -164,10 +191,30 @@ func _on_first_enemy_timer_timeout():
 
 func _on_play_pressed():
 	$"msg/pause".visible = true
-	$"msg/play".visible = false
+	$"msg/BoxContainer".visible = false
 	get_tree().paused = false
 
 func _on_pause_pressed():
 	$"msg/pause".visible = false
-	$"msg/play".visible = true
+	$"msg/BoxContainer".visible = true
 	get_tree().paused = true
+
+
+func _on_save_and_exit_pressed():
+	get_tree().paused = false
+	#Saving gems data
+	var gemsCount := 0
+	var config = ConfigFile.new()
+	var err = config.load("user://GameData.cfg")
+	if err == OK:
+		gemsCount = config.get_value("GameData","gems") + $"player".gems
+	if err != OK:
+		gemsCount = $"player".gems
+	print(gemsCount)
+	config.set_value("GameData", "gems", gemsCount)
+	config.set_value("GameData", "kill", kills)
+	config.set_value("GameData", "gemsCollected", $"player".gems)
+	config.save("user://GameData.cfg")
+	death = true
+	$"player".queue_free()
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

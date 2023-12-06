@@ -487,19 +487,6 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 text = "Enemy Spawning in 2.32"
 
-[node name="play" type="TextureButton" parent="msg"]
-process_mode = 2
-visible = false
-anchors_preset = -1
-anchor_left = 0.0246914
-anchor_top = 0.0114441
-anchor_right = 0.160494
-anchor_bottom = 0.0566758
-texture_normal = ExtResource("4_bqilb")
-ignore_texture_size = true
-stretch_mode = 4
-metadata/_edit_use_anchors_ = true
-
 [node name="pause" type="TextureButton" parent="msg"]
 anchors_preset = -1
 anchor_left = 0.0277778
@@ -511,11 +498,46 @@ ignore_texture_size = true
 stretch_mode = 4
 metadata/_edit_use_anchors_ = true
 
+[node name="BoxContainer" type="BoxContainer" parent="msg"]
+process_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -19.5
+offset_right = 199.0
+offset_bottom = 245.5
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="play" type="TextureButton" parent="msg/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("4_bqilb")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="save_and_exit" type="Button" parent="msg/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Save and Exit"
+
 [node name="lettuce_spawn_time" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="gun_spawn_time" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
 
 [connection signal="fired" from="." to="player" method="_on_game_fired"]
 [connection signal="timeout" from="first_enemy_timer" to="." method="_on_first_enemy_timer_timeout"]
-[connection signal="pressed" from="msg/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="msg/pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="msg/BoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="msg/BoxContainer/save_and_exit" to="." method="_on_save_and_exit_pressed"]

@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-@export var desi_katta_dmg := 1.0
-@export var m469_dmg := 1.0
-@export var shotgun_dmg := 3.0
 @export var dmg_to_player := 10.0
 var player_position := Vector2.ZERO
 
@@ -31,6 +28,12 @@ func _physics_process(delta):
 		get_parent().get_node("player").get_node("healthbar").value -= dmg_to_player * delta
 		
 func _on_area_2d_area_entered(area):
+	#Gun Config
+	var gunConfig = ConfigFile.new()
+	gunConfig.load("user://gunSetting.cfg")
+	var desi_dmg = gunConfig.get_value("Desi_Katta", "damage")
+	var m469_dmg = gunConfig.get_value("m469", "damage")
+	var shotgun_dmg = gunConfig.get_value("shotgun", "damage")
 	if area.is_in_group("player"):
 		can_attack = true
 	if area.is_in_group("desi_katta_bullet"):
@@ -38,7 +41,7 @@ func _on_area_2d_area_entered(area):
 			is_playing_hit = true
 			$"AnimatedSprite2D".play("hit")
 			$"hit_animation".start()
-			$"healthbar".value -= desi_katta_dmg
+			$"healthbar".value -= desi_dmg
 		if $"healthbar".value == 0:
 			call_deferred("drop_item")
 	
@@ -67,14 +70,11 @@ func _on_hit_animation_timeout():
 	is_playing_hit = false
 
 func drop_item():
-	var drop_number = rg.randi_range(1,5)
+	var drop_number = rg.randi_range(1,2)
 	
 	if drop_number == 1:
 		var gem = gem_scene.instantiate()
 		gem.position = position
 		get_parent().add_child(gem)
-	if drop_number == 2:
-		var m469 = m469_scene.instantiate()
-		m469.position = position
-		get_parent().add_child(m469)
+
 	queue_free()

@@ -13,4 +13,5 @@ func _ready():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	print("Clicked")
+	get_tree().change_scene_to_file("res://scenes/load_to_menu.tscn")

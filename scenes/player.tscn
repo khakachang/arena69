@@ -73,7 +73,6 @@ script = ExtResource("1_i41an")
 movementJS = NodePath("Control/movement_jt")
 m469_mag_size = 25
 desi_katta_mag_size = 15
-desi_katta_reload_time = 1.0
 
 [node name="shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.317647)

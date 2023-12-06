@@ -39,7 +39,7 @@ scale = Vector2(0.1525, 0.1375)
 texture = ExtResource("2_qkosn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(28, -49.6501)
+position = Vector2(28, -46)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("1_5l8gy")
 
@@ -55,7 +55,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 30.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
