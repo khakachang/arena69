@@ -1,6 +1,10 @@
 extends CanvasLayer
 
+<<<<<<< HEAD
 const target_scene_path = "res://scenes/home.tscn"
+=======
+const target_scene_path = "res://scenes/menu.tscn"
+>>>>>>> origin/master
 
 var loading_status : int
 var progress : Array[float]

@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Arena"
+<<<<<<< HEAD
 run/main_scene="res://scenes/home.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
+=======
+run/main_scene="res://scenes/menu.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.188235, 0.184314, 0.168627, 1)
+boot_splash/image="res://Free 2D Animated Vector Game Character Sprites/Extras/1701594904158.png"
+>>>>>>> origin/master
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=10
 
@@ -21,7 +28,10 @@ boot_splash/minimum_display_time=10
 
 window/size/viewport_width=648
 window/size/viewport_height=1835
+<<<<<<< HEAD
 window/size/always_on_top=true
+=======
+>>>>>>> origin/master
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
