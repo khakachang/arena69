@@ -1,0 +1,543 @@
+[gd_scene load_steps=6 format=3 uid="uid://b84pok8fdjhue"]
+
+[ext_resource type="Texture2D" uid="uid://27r2lmhog5ow" path="res://Free 2D Animated Vector Game Character Sprites/Environment/ground2_white.png" id="1_a4aek"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_h7om8"]
+[ext_resource type="PackedScene" uid="uid://skplvjhtmgn2" path="res://scenes/player.tscn" id="2_j7k0k"]
+[ext_resource type="Texture2D" uid="uid://b85nklcchyxun" path="res://play.png" id="4_bqilb"]
+[ext_resource type="Texture2D" uid="uid://carmaau7lo5o1" path="res://pause.png" id="5_oglaf"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_h7om8")
+
+[node name="player" parent="." instance=ExtResource("2_j7k0k")]
+
+[node name="background" type="Node2D" parent="."]
+z_index = -1
+
+[node name="tile1" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.2, 307.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile2" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.2, 307.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile3" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.2, 917.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile4" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.2, 917.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile5" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.2, 307.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile6" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.2, 917.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile7" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.4, 1531.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile8" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.4, 1531.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile9" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.4, 2141.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile10" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.4, 2141.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile11" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.4, 1531.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile12" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.4, 2141.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile13" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.4, 307.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile14" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.4, 917.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile15" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.6, 1531.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile16" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.6, 2141.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile17" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.8, 307.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile18" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.8, 307.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile19" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.8, 917.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile20" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.8, 917.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile21" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.8, 307.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile22" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.8, 917.2)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile23" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.6, 1531.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile24" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.6, 1531.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile25" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.6, 2141.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile26" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.6, 2141.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile27" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.6, 1531.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile28" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.6, 2141.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile29" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.6, 307.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile30" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.6, 917.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile31" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.4, 1531.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile32" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.4, 2141.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile33" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.199, -2140.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile34" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.199, -2140.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile35" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.199, -1530.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile36" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.199, -1530.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile37" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.2, -2140.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile38" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.2, -1530.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile39" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.399, -916.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile40" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.399, -916.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile41" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(307.399, -306.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile42" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(917.399, -306.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile43" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.4, -916.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile44" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(1527.4, -306.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile45" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.4, -2140.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile46" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.4, -1530.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile47" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.6, -916.401)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile48" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(2141.6, -306.401)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile49" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.8, -2140.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile50" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.8, -2140.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile51" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.8, -1530.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile52" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.8, -1530.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile53" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.801, -2140.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile54" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.801, -1530.8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile55" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.6, -916.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile56" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.6, -916.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile57" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-2140.6, -306.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile58" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-1530.6, -306.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile59" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.601, -916.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile60" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-920.601, -306.601)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile61" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.601, -2140.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile62" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.601, -1530.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile63" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.401, -916.401)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="tile64" type="Sprite2D" parent="background"]
+modulate = Color(0.470588, 0.470588, 0.470588, 1)
+z_index = -1
+position = Vector2(-306.401, -306.401)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_a4aek")
+
+[node name="enemy_spawn_time" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="pistol_firerate" type="Timer" parent="."]
+one_shot = true
+
+[node name="first_enemy_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="msg" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="msg"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -146.0
+offset_top = 382.0
+offset_right = 146.0
+offset_bottom = 417.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "Enemy Spawning in 2.32"
+
+[node name="pause" type="TextureButton" parent="msg"]
+anchors_preset = -1
+anchor_left = 0.0277778
+anchor_top = 0.0114441
+anchor_right = 0.154321
+anchor_bottom = 0.0561308
+texture_normal = ExtResource("5_oglaf")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxContainer" type="BoxContainer" parent="msg"]
+process_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -19.5
+offset_right = 199.0
+offset_bottom = 245.5
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="play" type="TextureButton" parent="msg/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("4_bqilb")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="save_and_exit" type="Button" parent="msg/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Save and Exit"
+
+[node name="lettuce_spawn_time" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="gun_spawn_time" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="fired" from="." to="player" method="_on_game_fired"]
+[connection signal="timeout" from="first_enemy_timer" to="." method="_on_first_enemy_timer_timeout"]
+[connection signal="pressed" from="msg/pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="msg/BoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="msg/BoxContainer/save_and_exit" to="." method="_on_save_and_exit_pressed"]

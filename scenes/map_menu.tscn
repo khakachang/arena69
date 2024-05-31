@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=3 uid="uid://i000ejec5vn0"]
+
+[ext_resource type="Script" path="res://UI_Files/UI_Scripts/map_menu.gd" id="1_e2smw"]
+[ext_resource type="Texture2D" uid="uid://tuedv53y8lnm" path="res://UI_Files/Board.png" id="1_lyg1g"]
+[ext_resource type="Texture2D" uid="uid://bo625c5eur37h" path="res://UI_Files/back_button (1).png" id="2_ufman"]
+[ext_resource type="Texture2D" uid="uid://tb68vdvo0w2t" path="res://UI_Files/3521726.png" id="4_o7ho6"]
+[ext_resource type="Texture2D" uid="uid://8d1xofbyd435" path="res://UI_Files/Select map.png" id="5_na38r"]
+[ext_resource type="Texture2D" uid="uid://jq1mpjpk7j1a" path="res://UI_Files/Group (2).png" id="6_meuuo"]
+[ext_resource type="Texture2D" uid="uid://cstjtbl6x2eiw" path="res://UI_Files/Group (3).png" id="7_pywob"]
+[ext_resource type="Texture2D" uid="uid://d2yiie6livgiq" path="res://UI_Files/Group (4).png" id="8_3m7so"]
+[ext_resource type="Texture2D" uid="uid://bk0slapyw34rw" path="res://UI_Files/Group (5).png" id="9_j7w1m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v22m3"]
+content_margin_right = 20.0
+bg_color = Color(0.12549, 0.12549, 0.12549, 0.462745)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_left = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8noj"]
+content_margin_left = 100.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="map_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2smw")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lyg1g")
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_ufman")
+
+[node name="gem_indicator" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -204.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 110.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_v22m3")
+text = "1000"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="gem_indicator"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.336
+anchor_top = 0.235
+anchor_right = -0.042
+anchor_bottom = 0.768
+grow_vertical = 2
+texture = ExtResource("4_o7ho6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.194
+anchor_right = 1.0
+anchor_bottom = 0.194
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_na38r")
+stretch_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.284
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a8noj")
+horizontal_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 130
+
+[node name="map1" type="GridContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/v_separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/HBoxContainer/map1"]
+layout_mode = 2
+texture = ExtResource("6_meuuo")
+
+[node name="map1" type="TextureButton" parent="ScrollContainer/HBoxContainer/map1"]
+layout_mode = 2
+texture_normal = ExtResource("7_pywob")
+
+[node name="map2" type="GridContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/HBoxContainer/map2"]
+layout_mode = 2
+texture = ExtResource("8_3m7so")
+
+[node name="map2" type="TextureButton" parent="ScrollContainer/HBoxContainer/map2"]
+layout_mode = 2
+texture_normal = ExtResource("9_j7w1m")
+
+[node name="map3" type="GridContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/HBoxContainer/map3"]
+layout_mode = 2
+texture = ExtResource("8_3m7so")
+
+[node name="map3" type="TextureButton" parent="ScrollContainer/HBoxContainer/map3"]
+layout_mode = 2
+texture_normal = ExtResource("9_j7w1m")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/map1/map1" to="." method="_on_map_1_pressed"]

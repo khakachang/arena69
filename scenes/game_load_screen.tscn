@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckbilvhet3psa"]
+
+[ext_resource type="Script" path="res://scripts/game_load_screen.gd" id="1_22ja4"]
+[ext_resource type="Texture2D" uid="uid://1axo53rkdhub" path="res://Free 2D Animated Vector Game Character Sprites/Extras/1701594904158.png" id="2_3n738"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vogkv"]
+
+[node name="game_load_screen" type="CanvasLayer"]
+script = ExtResource("1_22ja4")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(0.188235, 0.184314, 0.168627, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_vogkv")
+metadata/_edit_use_anchors_ = true
+
+[node name="character" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3n738")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -153.0
+offset_top = -364.0
+offset_right = 153.0
+offset_bottom = -254.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 80
+text = "Loading"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]

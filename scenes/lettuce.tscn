@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://7ao3rtju8ng0"]
+
+[ext_resource type="Texture2D" uid="uid://dbq6t2kw3atti" path="res://Free 2D Animated Vector Game Character Sprites/Extras/icons8-leafy-green-48.png" id="1_o61bb"]
+[ext_resource type="Script" path="res://scripts/lettuce.gd" id="1_txl17"]
+[ext_resource type="Texture2D" uid="uid://bfle0ls110p3a" path="res://Free 2D Animated Vector Game Character Sprites/Extras/shadow.png" id="2_jwg2a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j75o4"]
+radius = 14.724
+height = 50.7022
+
+[sub_resource type="Animation" id="Animation_y72ad"]
+resource_name = "hover"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cri0b"]
+_data = {
+"hover": SubResource("Animation_y72ad")
+}
+
+[node name="lettuce" type="Area2D" groups=["lettuce"]]
+position = Vector2(0, -10)
+script = ExtResource("1_txl17")
+
+[node name="shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.317647)
+z_index = -1
+position = Vector2(-2, 29.1667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_jwg2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2.4625)
+texture = ExtResource("1_o61bb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.694641
+shape = SubResource("CapsuleShape2D_j75o4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cri0b")
+}
+
+[node name="dismiss" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="dismiss" to="." method="_on_dismiss_timeout"]

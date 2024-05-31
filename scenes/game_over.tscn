@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://8hhitbtcngyt"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_o4onl"]
+[ext_resource type="Texture2D" uid="uid://lltu6i8snim4" path="res://Free 2D Animated Vector Game Character Sprites/Extras/Diamong icon.png" id="2_m7t0n"]
+[ext_resource type="AudioStream" uid="uid://d3hombhqmid2h" path="res://game_over_sound_effects/mixkit-completion-of-a-level-2063.wav" id="3_0gp2r"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_at8wl"]
+
+[node name="gameOver" type="CanvasLayer"]
+script = ExtResource("1_o4onl")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(0.188235, 0.184314, 0.168627, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_at8wl")
+
+[node name="gems_collected_label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Gems Collected: "
+
+[node name="Sprite2D" type="Sprite2D" parent="gems_collected_label"]
+position = Vector2(-31, 25)
+scale = Vector2(0.63, 0.59)
+texture = ExtResource("2_m7t0n")
+
+[node name="enemy_killed_label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -141.5
+offset_right = 40.0
+offset_bottom = -86.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "💀Kill: "
+
+[node name="game_over_message" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -374.5
+offset_right = 139.0
+offset_bottom = -305.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Game Over"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = 112.5
+offset_right = 73.0
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Next"
+
+[node name="game_over_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0gp2r")
+volume_db = 15.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
